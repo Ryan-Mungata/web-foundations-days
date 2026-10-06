@@ -1,0 +1,132 @@
+/* 1. LIGHT THEME */
+:root {
+  --bg-color: #f2f4f8;
+  --card-color: #ffffff;
+  --text-color: #222222;
+  --border-color: #bbbbbb;
+  --button-color: #2a7de1;
+  --button-hover-color: #1b5fb4;
+  --button-text-color: #ffffff;
+}
+
+/* 2. DARK THEME */
+body.dark {
+  --bg-color: #121826;
+  --card-color: #1e2638;
+  --text-color: #e8eaf0;
+  --border-color: #4a5470;
+  --button-color: #5aa0f2;
+  --button-hover-color: #82b7f7;
+  --button-text-color: #0b1020;
+}
+
+
+/* 3. RESET AND BASE STYLES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+/* 4. CARD, LABEL AND TEXTAREA */
+section {
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  resize: vertical;
+}
+
+p {
+  margin: 10px 0 0 0;
+}
+
+
+/* 5. BUTTONS */
+button {
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+#clear-btn {
+  margin-top: 16px;
+}
+
+
+/* 6. CHARACTER COUNTER STATES */
+.warning {
+  color: orange;
+}
+
+.over {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* 7. SMALL SCREENS */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 14px;
+  }
+}
